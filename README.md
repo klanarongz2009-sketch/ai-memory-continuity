@@ -34,4 +34,8 @@ The skill does not assume that an MCP server is installed. If your client expose
 
 ## License
 
-No license has been selected for this repository yet. Until a license is added, reuse and redistribution permissions are not granted by this repository.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Project Status and Disclaimer
+
+This is an independent project. It is provided "as is" and without warranties of any kind, express or implied. There is no guarantee that this project, its skill instructions, or examples will work with any particular AI model, agent client, memory provider, MCP server, or future version; remain available or maintained; preserve data; or produce accurate, complete, or uninterrupted results. Review the instructions, verify behavior, and keep independent backups before relying on this project. This project is not an official product, service, or endorsement of any AI platform or memory provider unless explicitly stated.
