@@ -1,2 +1,37 @@
-# ai-memory-continuity
-Provider-neutral Agent Skill for persistent memory continuity across AI sessions
+# AI Memory Continuity
+
+A portable Agent Skill for retrieving relevant long-term user context before personalized, ongoing, or follow-up work.
+
+This project is independent of any one memory provider. It can guide an agent to use persistent Markdown context files and any explicitly available, user-authorized memory MCP. It does not create automatic synchronization between stores or guarantee that every host loads a skill in every new conversation.
+
+## What it does
+
+- Reads user-designated `USER.md` and `MEMORY.md` only when they are present and accessible in the active workspace.
+- Searches connected memory tools when available, using the tool's actual schema and relevant semantic queries.
+- Distinguishes current user statements from older notes, inferences, and AI-generated claims.
+- Avoids claiming that a file or memory was read unless the read/search actually succeeded.
+- Saves durable information only through an available authorized write path, without retaining raw transcripts or secrets.
+- Explains the limits of skill loading, automatic recall, and synchronization between separate memory systems.
+
+## Install
+
+Copy `SKILL.md` into a supported Agent Skills directory for your client. Common project-local locations include:
+
+- `.agents/skills/ai-memory-continuity/SKILL.md`
+- `.claude/skills/ai-memory-continuity/SKILL.md`
+
+Some clients use other skill directories. Check the documentation for the client and version you use. A project-local install applies only when that project workspace is open. Use the host's supported global/personal skills directory for broader availability.
+
+The skill cannot force a host to load or trigger it. After installation, verify in a fresh conversation that the client actually invoked the skill and its memory tools before relying on cross-chat continuity.
+
+## Memory files
+
+If you use Markdown context files, keep them in the workspace that the agent can access. Use only the files you intentionally designate. Do not put passwords, API keys, tokens, or other secrets in these files. Their presence in one workspace does not imply that they are available in another workspace or chat.
+
+## Provider neutrality
+
+The skill does not assume that an MCP server is installed. If your client exposes a memory provider, use only its available tools and schemas. Separate providers and platform account memory remain separate unless a verified integration says otherwise.
+
+## License
+
+No license has been selected for this repository yet. Until a license is added, reuse and redistribution permissions are not granted by this repository.
