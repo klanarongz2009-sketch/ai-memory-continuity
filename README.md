@@ -4,6 +4,12 @@ A portable Agent Skill for retrieving relevant long-term user context before per
 
 This project is independent of any one memory provider. It can guide an agent to use persistent Markdown context files and any explicitly available, user-authorized memory MCP. It does not create automatic synchronization between stores or guarantee that every host loads a skill in every new conversation.
 
+## Intended Audience and Adoption
+
+This independent, provider-neutral project is intended for individual users, independent developers, and teams building AI assistants or agent clients. It may be evaluated, adapted, or integrated by projects and providers—including Google, OpenAI, Anthropic, and others—subject to each host's technical capabilities, policies, and review. Naming a provider does not imply affiliation, endorsement, adoption, or compatibility. No provider is represented as having adopted this project unless that is separately verified.
+
+The repository offers a portable skill specification and example workflow; it cannot install itself into third-party products or require any provider to support it. Adoption requires an implementation or configuration path in the relevant product.
+
 ## What it does
 
 - Reads user-designated `USER.md` and `MEMORY.md` only when they are present and accessible in the active workspace.
